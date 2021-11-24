@@ -30,7 +30,7 @@ bool informed_search = false;						//used in state compare operator function
 bool bfs_search = false;							//used in Expand function
 double runtime;										//tracks runtime of search									//8-Puzzle is a 3X3 matrix
 
-list<State> closed_list, active_list, active_list1;
+list<State> closed_list, active_list;
 list<string> path;
 State start_state, current_state, temp_state, initial_state;
 
@@ -56,10 +56,10 @@ int main()
 	start_state.total_cost = start_state.g + start_state.h; //total cost
 	start_state.parent = NULL;								//root node
 
-	//running iterative depth first search algorithm
+	//running A star search algorithm
 	Astar();
 
-	//Restart States and lilst
+	//Restart States and list
 	start_state = initial_state;							//set start_state to initial_state
 	active_list.clear();									//empties active_list
 	closed_list.clear();									//empties closed_list
