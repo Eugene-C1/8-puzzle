@@ -279,7 +279,6 @@ void Expand(State *current_state)
 						temp_state.total_cost = temp_state.g + temp_state.h;
 						temp_state.move = 3;
 
-						//temp = "RIGHT";
 						//BFS require FIFO
 						if (bfs_search)
 						{
