@@ -1,12 +1,9 @@
 /*
-CS421 Assignment 2
-
-This program solves the 8-Puzzle using the following search algorithms:
-Bounded Depth-First Search,
-Iterative Deepening Search,
-Breadth-First Search,
-Best-First Search (A*)
-
+	Name:
+		Eugene Jerick C. Cam
+		Lubert Kaimo Salalima
+		Errol Brutas
+		Arthur James Onrubia
 */
 #include <iostream>
 #include <list>
@@ -59,8 +56,8 @@ int main()
 	start_state.total_cost = start_state.g + start_state.h; //total cost
 	start_state.parent = NULL;								//root node
 
-	// running iterative depth first search algorithm
-	IterativeDepthFirstSearch();
+	//running iterative depth first search algorithm
+	Astar();
 
 	//Restart States and lilst
 	start_state = initial_state;							//set start_state to initial_state
@@ -73,7 +70,7 @@ int main()
 	informed_search = true;									//set informed search to true
 
 	//running iterative depth first search algorithm
-	Astar();
+	IterativeDepthFirstSearch();
 
 	return 0;
 }
