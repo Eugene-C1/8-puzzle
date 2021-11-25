@@ -68,7 +68,7 @@ int main()
 	start_state.heuristics();								//set heuristic value
 	start_state.total_cost = start_state.g + start_state.h; //total cost
 	start_state.parent = NULL;								//root node
-	informed_search = true;									//set informed search to true
+	informed_search = false;								//set informed search to true
 
 	//running iterative depth first search algorithm
 	IterativeDepthFirstSearch();
