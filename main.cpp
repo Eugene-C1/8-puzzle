@@ -205,7 +205,7 @@ void Expand(State *current_state)
 						temp_state.heuristics();
 						temp_state.total_cost = temp_state.g + temp_state.h;
 						temp_state.move = 0;
-						//BFS requires FIFO
+						//informed search requires FIFO
 						if (uninformed_search)
 						{
 							active_list.push_back(temp_state);
@@ -230,7 +230,7 @@ void Expand(State *current_state)
 						temp_state.total_cost = temp_state.g + temp_state.h;
 						temp_state.move = 1;
 
-						//BFS requires FIFO
+						//informed search requires FIFO
 						if (uninformed_search)
 						{
 							active_list.push_back(temp_state);
@@ -255,7 +255,7 @@ void Expand(State *current_state)
 						temp_state.total_cost = temp_state.g + temp_state.h;
 						temp_state.move = 2;
 
-						//BFS requires FIFO
+						//informed search requires FIFO
 						if (uninformed_search)
 						{
 							active_list.push_back(temp_state);
@@ -279,7 +279,7 @@ void Expand(State *current_state)
 						temp_state.total_cost = temp_state.g + temp_state.h;
 						temp_state.move = 3;
 
-						//BFS require FIFO
+						//informed search requires FIFO
 						if (uninformed_search)
 						{
 							active_list.push_back(temp_state);
