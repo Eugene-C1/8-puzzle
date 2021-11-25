@@ -57,6 +57,7 @@ int main()
 	start_state.parent = NULL;								//root node
 
 	//running A star search algorithm
+	informed_search = true; //set informed search to true
 	Astar();
 
 	//Restart States and list
