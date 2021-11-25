@@ -7,7 +7,7 @@ using namespace std;
 
 //forward declarations
 extern bool informed_search;
-extern bool bfs_search;
+extern bool uninformed_search;
 extern int Goal[3][3];
 
 class State

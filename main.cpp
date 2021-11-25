@@ -27,7 +27,7 @@ Goal Configuration
 int Goal[3][3] = {{1, 2, 3}, {8, 0, 4}, {7, 6, 5}}; //tracks generated nodes in search process
 unsigned int nodes_expanded;						//used to track nodes expanded
 bool informed_search = false;						//used in state compare operator function
-bool bfs_search = false;							//used in Expand function
+bool uninformed_search = false;						//used in Expand function
 double runtime;										//tracks runtime of search									//8-Puzzle is a 3X3 matrix
 
 list<State> closed_list, active_list;
@@ -206,7 +206,7 @@ void Expand(State *current_state)
 						temp_state.total_cost = temp_state.g + temp_state.h;
 						temp_state.move = 0;
 						//BFS requires FIFO
-						if (bfs_search)
+						if (uninformed_search)
 						{
 							active_list.push_back(temp_state);
 						}
@@ -231,7 +231,7 @@ void Expand(State *current_state)
 						temp_state.move = 1;
 
 						//BFS requires FIFO
-						if (bfs_search)
+						if (uninformed_search)
 						{
 							active_list.push_back(temp_state);
 						}
@@ -256,7 +256,7 @@ void Expand(State *current_state)
 						temp_state.move = 2;
 
 						//BFS requires FIFO
-						if (bfs_search)
+						if (uninformed_search)
 						{
 							active_list.push_back(temp_state);
 						}
@@ -280,7 +280,7 @@ void Expand(State *current_state)
 						temp_state.move = 3;
 
 						//BFS require FIFO
-						if (bfs_search)
+						if (uninformed_search)
 						{
 							active_list.push_back(temp_state);
 						}
